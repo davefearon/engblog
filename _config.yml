@@ -12,3 +12,23 @@ title: Jetpac Engineering
 author: Jetpac Engineering Team
 description: Where the Jetpac Engineering Team writes about all the interesting things they come across while making Jetpac.
 keywords: jetpac, travel, engineering, eng, tech, html, html5, ios, cassandra, psotgres, data
+
+authors:
+  dave:
+    name: Dave Fearon
+    display_name: Dave Fearon
+    email: dave@jetpac.com
+    twitter: davefearon
+    github: davefearon
+  chris:
+    name: Chris Raynor
+    display_name: Chris Raynor
+    email: chris@jetpac.com
+    twitter: drtriumpth
+    github: drtriumpth
+  pete:
+    name: Pete Warden
+    display_name: Pete Warden
+    email: pete@jetpac.com
+    twitter: petewarden
+    github: petewarden

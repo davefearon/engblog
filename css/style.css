@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  /*background: transparent url('../img/noisy_grid.png') repeat scroll 0 0;*/
 }
 
 #wrap {
@@ -8,6 +9,13 @@ body {
   height: auto !important;
   height: 100%;
   margin: 0 auto -50px;
+}
+
+#wrap .container-narrow {
+  margin-bottom: 100px;
+  background: white;
+  /*padding: 10px 20px 20px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
 }
 
 .masthead {

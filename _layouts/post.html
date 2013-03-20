@@ -2,10 +2,14 @@
 layout: default
 ---
 
-<article data-link="{{ post.url }}">
+{% assign author = site.authors[page.author] %}
+<article data-link="{{ page.url }}">
   <header>
     <h2>{{ page.title }}</h2>
-    <h6>Posted on <time datetime="{{ post.date }}" pubdate>{{ page.date | date_to_string }}</time></h6>
+    <h5 class="byline">
+      by {{ author.display_name }}
+    </h5>
+    <h6>Posted on <time datetime="{{ page.date }}" pubdate>{{ page.date | date_to_string }}</time></h6>
     <hr>
   </header>
   
