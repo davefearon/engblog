@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -50px;
+}
+
+.masthead {
+  margin: 30px 0 0 0;
+}
+
+#footer {
+  height: 50px;
+  background: whitesmoke;
+}
+
+.container-narrow .credit {
+  padding: 15px 0;
+}
+
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Custom container */
+.container-narrow {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: 1;
+}
+
+/* Supporting marketing content */
+/*.marketing {
+  margin: 60px 0;
+}*/
+/*.marketing p + h4 {
+  margin-top: 28px;
+}*/
+
+article header h2 {
+  cursor: pointer;
+  color: #0088cc;
+  text-decoration: none;
+}
+
+article header h2:hover {
+  color: #005580;
+  text-decoration: underline;
+}
