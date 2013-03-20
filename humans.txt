@@ -1,0 +1,8 @@
+# humanstxt.org/
+# The humans responsible
+
+# TEAM
+
+    Pete Warden -- CTO/Co-Founder -- @petewarden
+    Chris Raynor -- Data Engineer -- @drtrimuph
+    Dave Fearon -- Data Engineer - @davefearon

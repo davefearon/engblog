@@ -2,13 +2,13 @@ auto: true
 server_port: 4000
 markdown: maruku
 pagination: true
-paginate: 2
+paginate: 5
 permalink: pretty
 
-#url: http://davefearon.com
+#url: https://www.jetpac.com/engineering
 url: http://localhost:4000
 
-title: Jetpac Engineering Blog
+title: Jetpac Engineering
 author: Jetpac Engineering Team
-description: 
+description: Where the Jetpac Engineering Team writes about all the interesting things they come across while making Jetpac.
 keywords: jetpac, travel, engineering, eng, tech, html, html5, ios, cassandra, psotgres, data

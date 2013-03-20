@@ -2,11 +2,12 @@
 layout: default
 ---
 
-<section class="content">
-
-	<h2 class="lc"><em>{{ page.title }}</em></h2>
-	<hr>
-
-	{{ content }}
-
-</section>
+<article data-link="{{ post.url }}">
+  <header>
+    <h2>{{ page.title }}</h2>
+    <h6>Posted on <time datetime="{{ post.date }}" pubdate>{{ page.date | date_to_string }}</time></h6>
+    <hr>
+  </header>
+  
+  {{ content }}
+</article>
