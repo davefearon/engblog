@@ -24,6 +24,7 @@ fi
 echo $MESSAGE > $LAST_MESSAGE_FILE
 
 cd $JETPACENGBLOG_PATH
+git add *
 
 export GIT_MERGE_AUTOEDIT=no # See http://git-blame.blogspot.com/2012/02/anticipating-git-1710.html
 git commit -a -m "$MESSAGE"
