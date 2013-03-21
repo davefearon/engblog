@@ -1,0 +1,65 @@
+#!/bin/bash 
+
+if [ $# -lt 1 ]
+then
+  read LAST_MESSAGE < "New engineering blog post"
+  if [ -z "$LAST_MESSAGE" ]
+  then
+    echo "Pass in the commit message after 'jps', eg jpc \"Made some changes\""
+    exit 1
+  fi
+  MESSAGE=$LAST_MESSAGE
+else
+  MESSAGE=$1
+#  if ! [[ $MESSAGE =~ (#[0-9]+)|(github\.com) ]]
+#  then
+#    read -p "No bug URL or story number in message, are you sure you want to commit? " -n 1 -r
+#    echo
+#    if ! [[ $REPLY =~ ^[Yy]$ ]]
+#    then
+#      exit 1
+#    fi
+#  fi
+fi
+echo $MESSAGE > $LAST_MESSAGE_FILE
+
+cd $JETPACENGBLOG_PATH
+
+export GIT_MERGE_AUTOEDIT=no # See http://git-blame.blogspot.com/2012/02/anticipating-git-1710.html
+git commit -a -m "$MESSAGE"
+if [ $? -gt 0 ]; then
+    echo "Commit failed"
+    exit 1
+fi
+
+git pull origin master
+if [ $? -gt 0 ]; then
+    echo "Update failed"
+    exit 1
+fi
+
+git push origin master
+if [ $? -gt 0 ]; then
+    echo "Push to master failed"
+    exit 1
+fi
+
+# Generate site
+jekyll --no-server --no-auto
+if [ $? -gt 0 ]; then
+    echo "Jekyll Build Failed"
+    exit 1
+fi
+
+# Remove old files
+cd $JETPAC_PATH
+rm -rf frontend/public/engineering/*
+
+# Copy new files over to jetpac
+cd $JETPACENGBLOG_PATH
+cp -r _site/* ../jetpac/frontend/public/engineering
+
+cd $JETPAC_PATH/frontend/public/engineering
+git add *
+
+jpc "$MESSAGE"

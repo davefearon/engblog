@@ -7,7 +7,7 @@ permalink: pretty
 
 exclude: bin/
 
-url: /engineering
+url: http://localhost:4000
 
 title: Jetpac Engineering
 author: Jetpac Engineering Team
