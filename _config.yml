@@ -5,8 +5,9 @@ pagination: true
 paginate: 5
 permalink: pretty
 
-#url: https://www.jetpac.com/engineering
-url: http://localhost:4000
+exclude: bin/
+
+url: /engineering
 
 title: Jetpac Engineering
 author: Jetpac Engineering Team

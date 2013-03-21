@@ -1,5 +1,5 @@
 {% assign author = site.authors[post.author] %}
-<article data-link="{{ post.url }}">
+<article data-link="{{ site.url }}{{ post.url }}">
   <header>
     <h2>{{ post.title }}</h2>
     <h5 class="byline">

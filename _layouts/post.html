@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign author = site.authors[page.author] %}
-<article data-link="{{ page.url }}">
+<article data-link="{{ site.url }}{{ page.url }}">
   <header>
     <h2>{{ page.title }}</h2>
     <h5 class="byline">
