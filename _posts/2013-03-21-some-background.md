@@ -3,6 +3,9 @@ layout: post
 title: Some background
 published: true
 author: dave
+tags:
+- backbonejs
+- ruby
 ---
 
 I started out my development career building websites and web experiences for clients of all sizes. I did this for a couple years before becoming a little burnt out and wanted to explore the future of web technologies...HTML5. I moved on to a new company and helped them build experiences for their clients to gather data. This was a big change for me and it no longer meant I could safely assume that the end user would be connected to the internet at all times and that everything would just work. I now had to assume the worst...the end user would be using my applications in some of the worst conditions for browsing the web. Little to no internet, very hot or very cold, rain, poor lighting, and I only had a short timeframe in which to retain the end user. This meant I had to be creative in my approaches to problems. Using offline caching methods whenever possible, smart polling for a connection so that we could gather the data as soon as possible and a lot of tweaking and testing with the UI/UX so the user would know what was what no matter where they were.

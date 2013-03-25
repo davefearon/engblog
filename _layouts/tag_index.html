@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<h2>{{ page.title }}</h2>
+
+<hr>
+
+<section class="content">
+  {% for post in site.posts %}
+    {% for tag in post.tags %}
+      {% if tag == page.tag %}
+
+        {% include posts %}
+
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</section>

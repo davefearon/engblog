@@ -3,13 +3,28 @@
   <header>
     <h2>{{ post.title }}</h2>
     <h5 class="byline">
-      by {{ author.display_name }}
+      by <a href="{{ site.url }}/author/{{ post.author}}">{{ author.display_name }}</a>
     </h5>
     <h6>Posted on <time datetime="{{ post.date }}" pubdate>{{ post.date | date_to_string }}</time></h6>
     <hr>
   </header>
   
   {{ post.content }}
+
+  <hr>
+  
+  <footer>
+    <p class="tags">
+      Tags:
+        {% for tag in post.tags %}
+          <a href="{{ site.url }}/tag/{{ tag }}" class="capitalize">{{ tag }}</a>{% if forloop.last != true %}, {% endif %}
+        {% endfor %}
+    </p>
+    <p>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ author.twitter }}">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </p>
+  </footer>
 </article>
 
 <hr>
