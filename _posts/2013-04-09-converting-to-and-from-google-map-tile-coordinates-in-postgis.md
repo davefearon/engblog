@@ -8,7 +8,7 @@ tags:
 - sql
 ---
 
-Google Maps' system of power-of-two tiles has become a defacto standard, widely used by all sorts of web mapping software. I've found it handy to use as a caching scheme for our data, but the PostGIS calls to use it were getting pretty messy, so I wrapped them up in a few functions. The code is up at https://github.com/petewarden/postgis2gmap, and here's a quick rundown:
+Google Maps' system of power-of-two tiles has become a defacto standard, widely used by all sorts of web mapping software. I've found it handy to use as a caching scheme for our data, but the PostGIS calls to use it were getting pretty messy, so I wrapped them up in a few functions. The code is up at <a href="https://github.com/petewarden/postgis2gmap" target="_blank">https://github.com/petewarden/postgis2gmap</a>, and here's a quick rundown:
 
 **tile_indices_for_lonlat(lonlat geography, zoom_level int)**
 
